@@ -1,11 +1,24 @@
 <testgen-eight-global-header
-  (sideNavToggle)="sideNavToggle()"
+  (sidenavtoggle)="sideNavToggle()"
 ></testgen-eight-global-header
 ><testgen-eight-global-header
   (sidenavtoggle)="sideNavToggle()"
 ></testgen-eight-global-header>
 <div class="wrapper">
   <div class="container">
+    <testgen-eight-global-sidenav [opened]="sideNavOpen">
+      <mat-nav-list sidenav="">
+        <a
+          mat-list-item=""
+          routerlinkactive="active-link"
+          routerlink="/"
+          (click)="sideNavToggle()"
+        >
+          <span class="App__sidenav-text">Home</span>
+        </a>
+      </mat-nav-list>
+      <router-outlet></router-outlet>
+    </testgen-eight-global-sidenav>
     <testgen-eight-global-sidenav [opened]="sideNavOpen">
       <mat-nav-list sidenav="">
         <a
