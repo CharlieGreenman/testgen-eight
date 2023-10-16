@@ -1,5 +1,5 @@
 {
-  "extends": ["../../../../../.eslintrc.json"],
+  "extends": ["<%= relativePathFromRoot %>.eslintrc.json"],
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {
@@ -13,7 +13,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "testgen-eight",
+            "prefix": "<%= projectName %>",
             "style": "camelCase"
           }
         ],
@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "testgen-eight",
+            "prefix": "<%= projectName %>",
             "style": "kebab-case"
           }
         ]
